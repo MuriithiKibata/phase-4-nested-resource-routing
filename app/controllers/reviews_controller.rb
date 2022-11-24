@@ -3,8 +3,8 @@ class ReviewsController < ApplicationController
 
   def index
     if  (params[:dog_house_id]) 
-      reviews = DogHouse.find(params[:dog_house_id])
-      reviews = dog.house.reviews
+      dog_house = DogHouse.find(params[:dog_house_id])
+      reviews = dog_house.reviews
     else
     reviews = Review.all
     end
